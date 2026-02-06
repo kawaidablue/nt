@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="536" viewBox="0 0 580 536">
+  <defs>
+    <style>
+      .cls-1, .cls-9 {
+        fill: none;
+      }
+
+      .cls-1, .cls-6 {
+        stroke: #fff;
+      }
+
+      .cls-2, .cls-3, .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-7 {
+        font-size: 27px;
+        font-family: HiraginoSans-W6, Hiragino Sans;
+      }
+
+      .cls-3 {
+        font-size: 20px;
+        font-family: HiraginoSans-W3, Hiragino Sans;
+      }
+
+      .cls-4 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-5 {
+        font-family: Arial-BoldItalicMT, Arial;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .cls-7 {
+        fill: #3e6acc;
+      }
+
+      .cls-8 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="グループ_342" data-name="グループ 342" transform="translate(-735 -4879)">
+    <g id="楕円形_22" data-name="楕円形 22" class="cls-1" transform="translate(887 4879)">
+      <circle class="cls-8" cx="138" cy="138" r="138"/>
+      <circle class="cls-9" cx="138" cy="138" r="137.5"/>
+    </g>
+    <g id="楕円形_23" data-name="楕円形 23" class="cls-1" transform="translate(735 5139)">
+      <circle class="cls-8" cx="138" cy="138" r="138"/>
+      <circle class="cls-9" cx="138" cy="138" r="137.5"/>
+    </g>
+    <g id="楕円形_24" data-name="楕円形 24" class="cls-1" transform="translate(1039 5139)">
+      <circle class="cls-8" cx="138" cy="138" r="138"/>
+      <circle class="cls-9" cx="138" cy="138" r="137.5"/>
+    </g>
+    <text id="あなたの希望" class="cls-2" transform="translate(1025 4974)"><tspan x="-81" y="0">あなたの希望</tspan></text>
+    <text id="しっかりと噛みたい_安心できる_大きく口を開けたい" data-name="しっかりと噛みたい
+安心できる
+大きく口を開けたい" class="cls-3" transform="translate(1025 5010)"><tspan x="-90" y="0">しっかりと噛みたい</tspan><tspan class="cls-4" y="0"></tspan><tspan x="-50" y="34">安心できる</tspan><tspan class="cls-4" y="34"></tspan><tspan x="-90" y="68">大きく口を開けたい</tspan></text>
+    <text id="高レベルの_予防技術" data-name="高レベルの
+予防技術" class="cls-2" transform="translate(872 5235)"><tspan x="-67.5" y="0">高レベルの</tspan><tspan class="cls-5" y="0"></tspan><tspan x="-54" y="36">予防技術</tspan></text>
+    <text id="希望する衛生環境を_高度に再現するスキル" data-name="希望する衛生環境を
+高度に再現するスキル" class="cls-3" transform="translate(873 5307)"><tspan x="-90" y="0">希望する衛生環境を</tspan><tspan class="cls-4" y="0"></tspan><tspan x="-99.3" y="34">高度に再現するスキル</tspan></text>
+    <text id="世界基準の_治療技術" data-name="世界基準の
+治療技術" class="cls-2" transform="translate(1176 5235)"><tspan x="-67.5" y="0">世界基準の</tspan><tspan class="cls-5" y="0"></tspan><tspan x="-54" y="36">治療技術</tspan></text>
+    <text id="世界レベルの_治療技術の習得" data-name="世界レベルの
+治療技術の習得" class="cls-3" transform="translate(1177 5307)"><tspan x="-60" y="0">世界レベルの</tspan><tspan class="cls-4" y="0"></tspan><tspan x="-70" y="34">治療技術の習得</tspan></text>
+    <g id="楕円形_25" data-name="楕円形 25" class="cls-6" transform="translate(955 5096)">
+      <circle class="cls-8" cx="80" cy="80" r="80"/>
+      <circle class="cls-9" cx="80" cy="80" r="79.5"/>
+    </g>
+    <text id="本当の_健康" data-name="本当の
+健康" class="cls-7" transform="translate(1035 5169)"><tspan x="-40.5" y="0">本当の</tspan><tspan class="cls-5" y="0"></tspan><tspan x="-27" y="36">健康</tspan></text>
+  </g>
+</svg>

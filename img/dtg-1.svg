@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #333;
+        opacity: 0.2;
+      }
+    </style>
+  </defs>
+  <rect id="dtg" class="cls-1" width="1200" height="640"/>
+</svg>
