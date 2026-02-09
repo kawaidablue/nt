@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ja">
-    <head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>ナチュラルティース</title>
@@ -52,7 +52,7 @@
     />
   </head>
   <body>
-        <header id="header" class="header">
+    <header id="header" class="header">
       <div class="header-wrap">
         <!-- ロゴ -->
         <div class="header-wrap__logo">
@@ -107,327 +107,416 @@
             </a>
           </div>
         </nav>
+        <!-- ハンバーガーボタン（SPのみ表示） -->
+        <button
+          class="hamburger"
+          type="button"
+          aria-controls="spnav"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <!-- SPナビ（PCナビと同じ項目） -->
+        <div class="spnav" id="spnav" aria-hidden="true">
+          <div class="spnav__inner">
+            <nav class="spnav__menu">
+              <a href="index.html">TOP</a>
+              <a href="concept.html">クリニック紹介</a>
+
+              <!-- 診療案内（下層） -->
+              <div class="spnav__group">
+                <button
+                  class="spnav__toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  診療案内 <span class="spnav__icon">+</span>
+                </button>
+                <div class="spnav__sub" aria-hidden="true">
+                  <a href="nt_implant.html">インプラント</a>
+                  <a href="nt_member.html">NT会員(自費予防)</a>
+                  <a href="children.html">子供達の噛み合わせ治療</a>
+                  <a href="yokayoka.html">良か良かデンチャー</a>
+                  <a href="sinbi.html">審美治療</a>
+                </div>
+              </div>
+
+              <!-- 設備紹介（下層） -->
+              <div class="spnav__group">
+                <button
+                  class="spnav__toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  設備紹介 <span class="spnav__icon">+</span>
+                </button>
+                <div class="spnav__sub" aria-hidden="true">
+                  <a href="tour.html">医院ツアー</a>
+                  <a href="sterillzation.html">滅菌処理</a>
+                  <a href="staff.html">スタッフ紹介</a>
+                </div>
+              </div>
+
+              <a href="staff.html">スタッフ紹介</a>
+              <a href="access.html">アクセス・診療時間</a>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
     <section class="top" id="top">
-        <div class="top-wrap">
-            <div class="top_ttl">
-                <h1 class="top-tl-en">NT member</h1>
-            </div>
+      <div class="top-wrap">
+        <div class="top_ttl">
+          <h1 class="top-tl-en">NT implant</h1>
         </div>
+      </div>
     </section>
     <section class="nt_im" id="nt_im">
-        <div class="nt_im-wrap __inner">
-            <div class="sub__ttl">
-                <h2 class="sub__ttl__txt">NTインプラント</h2>
-            </div>
-            <div class="nt_im-wrap__body">
-                <div class="nt_im-wrap__we__head sub__head">
-                    <h3 class="sub__head__txt">インプラントはこんな方におすすめ</h3>
-                </div>
-                <div class="nt_im-wrap__we__body">
-                    <ul class="we-list">
-                        <li class="we-list__item">治療後に腫れるのが嫌だ</li>
-                        <li class="we-list__item">長時間の手術は怖く嫌だ</li>
-                        <li class="we-list__item">家族にもバレずに治療したい</li>
-                        <li class="we-list__item">歳なので固い食べ物を諦めていた</li>
-                        <li class="we-list__item">仕事が忙しいので時間がない</li>
-                        <li class="we-list__item">友人とカラオケを大きく口を開けて歌いたい</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="nt_im-wrap__body">
-                <div class="nt_im-wrap__we__head sub__head">
-                    <h3 class="sub__head__txt">もう歳だからと諦める必要はありません！</h3>
-                    <p class="sinbi__subtxt">～身体への負担の少ない、低侵襲のインプラント治療を採用しています～</p>
-                </div>
-                <div class="nt_im-wrap__system__body">
-                  <div class="nt-member__system__body__txt">
-                    <p>
-                    院長の高崎は、九州大学大学院在学中の2000年からインプラント治療に取り組んでいます。<br>
-                    開業当初は、現在でも多くの歯科医院で行われているメスを使い切開する方法でした。術後、患者さんが腫れていたり痛みがでるのを見ていて、これが本当に良い方法なのか？と、疑問を持つようになりました。<br>
-                    2008年サンフランシスコのＤｒ.ラムの研修会に参加し、それまでの考えが一変しました。プロ野球の王さんが、内視鏡手術をして回復が早かった事はご存知の通りです。<br>
-                    やはり<span class="smallblue">インプラント治療でも、内視鏡の様に低侵襲で治療をすれば歯ぐきからの血流が保たれて治りが早い</span>と考え、現在実践しています。<br>
-                    <span class="smallblue">「あっと言う間に終わった」「想像していたほど、痛くなかった！」</span>等、嬉しい言葉をたくさん頂いております。<br>
-                    入れ歯は嫌で自分の歯の様に噛みたいけど、腫れや痛みが怖いという方、ぜひ一度、ご相談ください。
-                    </p>
-                  </div>
-            </div>
-            <div class="implant-flow__inner">
-              <div class="nt_im-wrap__we__head sub__head">
-                    <h3 class="sub__head__txt">NTインプラントの流れ</h3>
-                    <p class="sinbi__subtxt">～治療前の検査から、治療後の予防まで安全・安心の診療システムです～</p>
-                </div>
-                <div class="implant-flow__list">
-      <div class="implant-flow__item">
-        <div class="implant-flow__text">
-          <span class="step">STEP 01</span>
-          <h3>精密な検査</h3>
-          <p class="catch">〜どこよりも安全な治療を実現〜</p>
-          <p>
-            【CTによる解析】<br>
-            立体的な画像で骨の厚み・神経の位置まで把握し、
-            安全性を最優先に診断します。
-          </p>
+      <div class="nt_im-wrap __inner">
+        <div class="sub__ttl">
+          <h2 class="sub__ttl__txt">NTインプラント</h2>
         </div>
-
-        <figure class="implant-flow__img">
-          <img src="img/インプラントの流れ.jpg" alt="">
-        </figure>
-      </div>
-
-      <!-- STEP 2 -->
-      <div class="implant-flow__item">
-        <div class="implant-flow__text">
-          <span class="step">STEP 02</span>
-          <h3>治療前準備</h3>
-          <p class="catch">〜最短・最適な治療計画〜</p>
-          <p>
-            ＮＴインプラントは最短で１本『30分』で埋入が終わります。ＣＴ画像ソフトを使用して、画面上で治療の進行・術式を再現。これにより実際の治療はとても安全、かつ最短で行うことが可能になりました。
-          </p>
-        </div>
-
-        <figure class="implant-flow__img">
-          <img src="img/インプラントの流れ2.jpg" alt="">
-        </figure>
-      </div>
-
-      <!-- STEP 3 -->
-      <div class="implant-flow__item">
-        <div class="implant-flow__text">
-          <span class="step">STEP 03</span>
-          <h3>ケアの実施</h3>
-          <p class="catch">〜安心の無料メンテナンス3回つき〜</p>
-          <p>
-            従来の術後ケアに加えて、術前にもお口の検査・ケアを実施します。また免疫力を高める錠剤や、唾液分泌や血流を促すマウスリンパマッサージをうける事で、より早い術後の回復が望めます。
-            術後の経過確認、プロの歯科衛生士による３回の無料メインテナンスに加え、インプラントの長持ちに一番大切なご自宅でのケアも、しっかりとご指導いたします。
-            もちろん、全てＮＴインプラント治療の中に含まれるので、安心です。
-          </p>
-        </div>
-
-        <figure class="implant-flow__img">
-          <img src="img/インプラントの流れ3.jpg" alt="">
-        </figure>
-      </div>
-
-    </div>
-
-  </div>
-            </div>
-            <div class="nt_im-wrap__body">
-                <div class="nt_im-wrap__diff__head sub__head">
-                    <h3 class="sub__head__txt">一般的なオペと低侵襲オペの違いとは？</h3>
-                </div>
-                <div class="nt_im-wrap__diff__body">
-                  <div class="nt-wrap__diff__body__left">
-                    <img src="img/オペ.jpg" alt="">
-                  </div>
-                  <div class="nt-wrap__diff__body__right">
-                    <p>
-                      インプラントは、この３つのブロックからできています。<br>
-                      インプラントをアゴの骨に固定する為、手術が必要となります。<br>
-                      ※上の人工歯の質はいくつか選択できます。
-                    </p>
-                  </div>
-                </div>
-                <div class="nt_im-wrap__diff__method">
-                  <div class="nt_im-wrap__diff__method__top">
-                    <p>
-                      一般的な治療法ではインプラントを骨に固定する為、<span class="smallblue">広範囲に切り開く</span>必要がありました。
-                    </p>
-                    <div class="nt_im-wrap__diff__method__top__img">
-                      <img src="img/p_chigai1.jpg" alt="">
-                    </div>
-                  </div>
-                  <div class="nt_im-wrap__diff__method__top">
-                    <p>
-                      低侵襲の手術法では<span class="smallblue">最低限必要な箇所のみ</span>治療しますから、回復が早いのです
-                    </p>
-                    <div class="nt_im-wrap__diff__method__top__img">
-                      <img src="img/p_chigai2.jpg" alt="">
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="nt_im-wrap__body">
-                <div class="nt_im-wrap__diff__head sub__head">
-                    <h3 class="sub__head__txt">気軽にインプラントを決めてはダメです！！</h3>
-              <p class="sinbi__subtxt">
-                ～インプラント周囲炎をご存知ですか？～
-              </p>
-                </div>
-                <div class="nt_im-point__body">
-                  <div class="nt_im-point__body__top">
-                    <div class="nt-im-point__body__top__left">
-                      <img src="img/p_implant_shuien.jpg" alt="">
-                    </div>
-                    <div class="nt-im-point__body__top__right">
-                      <h5>
-                        インプラント周囲炎の3つの特徴
-                      </h5>
-                      <ul class="nt-im-point__body__top__right__list">
-                        <li class="nt-im-point__body__top__right__list__item">
-                          見た目の炎症が弱く、動揺・痛みもないため、自覚症状が少なく気付くのが遅れがち
-                        </li>
-                        <li class="nt-im-point__body__top__right__list__item">
-                          歯周病と比べると、10～20倍の速さで進行するため、重症化する傾向がある
-                        </li>
-                        <li class="nt-im-point__body__top__right__list__item">
-                          再生能力が弱いため、回復が遅れる事がある
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="nt_im-point__body__bottom">
-                    <h5 class="nt_im-point__body__bottom__ttl">
-                      インプラント周囲炎にならないためには？
-                    </h5>
-                    <div class="nt_im-point__body__bottom__content">
-                      <p>
-                        インプラント治療は、治療後のメインテナンスが欠かせません。
-                        このメインテナンスをしっかりと行わないと、インプラント周囲炎のような症状をはじめとした不具合が出てきます。
-                        当院ではインプラント治療後の最高のメインテナンス体制として「NT会員」という
-                        会員制予防プログラムを整えておりますので安心して、インプラント治療をお受け下さい。
-                      </p>
-                    </div>
-                    <div class="nt_im-point__body__bottom__btn">
-                      <a href="nt_member.html">
-                        NT会員について見る
-                      </a>
-                    </div>
-                  </div>
-                </div>
+        <div class="nt_im-wrap__body">
+          <div class="nt_im-wrap__we__head sub__head">
+            <h3 class="sub__head__txt">インプラントはこんな方におすすめ</h3>
           </div>
-        </section>
-    <footer class="footer" id="footer">
-        <div class="footer-wrap">
-            <div class="footer-wrap__main __inner">
-                <div class="footer-wrap__main__body">
-                    <div class="footer-wrap__main__left" >
-                        <div class="footer-logo">
-                            <a href="#" class="footer-logo__link">
-                                <img src="img/logo.svg" alt="ナチュラルティース ロゴ" class="footer-logo__img" />
-                            </a>
-                        </div>
-                        <div class="footer-wrap__center">
-                        <div class="footer-wrap__hour">
-                            <p class="footer-wrap__hour-text">診療時間</p>
-                            <p class="footer-wrap__hour-a.m">9:00 - 12:00</p>
-                            <p class="footer-wrap__hour-p.m">15:30 - 18:30</p>
-                        </div>
-                        <div class="footer-wrap__contact">
-                            <a href="#" class="footer-wrap__contact-ins">
-                                <span class="icon">
-                                    <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="18"
-                                    height="18"
-                                    viewBox="0 0 18 18"
-                                    >
-                                    <path
-                                    id="パス_1868"
-                                    data-name="パス 1868"
-                                    d="M6.62,10.79a15.149,15.149,0,0,0,6.59,6.59l2.2-2.2a.994.994,0,0,1,1.02-.24,11.407,11.407,0,0,0,3.57.57,1,1,0,0,1,1,1V20a1,1,0,0,1-1,1A17,17,0,0,1,3,4,1,1,0,0,1,4,3H7.5a1,1,0,0,1,1,1,11.36,11.36,0,0,0,.57,3.57,1,1,0,0,1-.25,1.02Z"
-                                    transform="translate(-3 -3)"
-                                    fill="#888"
-                                    />
-                                    </svg>
-                                </span>
-                                <span class="text">052-773-1811</span>
-                            </a>
-                            <a href="#" class="footer-wrap__contact-ins">
-                                <span class="icon">
-                                    <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="21.522"
-                                    height="23.059"
-                                    viewBox="0 0 21.522 23.059"
-                                    >
-                                    <path
-                                    id="calendar-days"
-                                    d="M5.765,0A1.15,1.15,0,0,1,6.918,1.153V3.075H14.6V1.153a1.153,1.153,0,0,1,2.306,0V3.075h1.537a3.077,3.077,0,0,1,3.075,3.075V19.985a3.077,3.077,0,0,1-3.075,3.075H3.075A3.077,3.077,0,0,1,0,19.985V6.149A3.077,3.077,0,0,1,3.075,3.075H4.612V1.153A1.15,1.15,0,0,1,5.765,0ZM18.447,20.753a.771.771,0,0,0,.769-.769V16.91H14.989v3.843Zm.769-6.149V10.761H14.989V14.6Zm-6.533,0V10.761H8.839V14.6Zm-6.149,0V10.761H2.306V14.6ZM2.306,16.91v3.075a.771.771,0,0,0,.769.769H6.533V16.91Zm6.533,0v3.843h3.843V16.91ZM5.765,5.38H3.075a.771.771,0,0,0-.769.769V8.455h16.91V6.149a.771.771,0,0,0-.769-.769Z"
-                                    fill="#888"
-                                    />
-                                </svg>
-                            </span>
-                            <span class="text">WEB予約</span>
-                        </a>
-                        <a href="#" class="footer-wrap__contact-ins">
-                            <span class="icon">
-                                <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="18"
-                                viewBox="0 0 20 18"
-                                >
-                                <path
-                                d="M20,3H4A2.006,2.006,0,0,0,2,5V16a2.006,2.006,0,0,0,2,2H7L6,19v2H18V19l-1-1h3a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,20,3Zm0,13H4V5H20Z"
-                                transform="translate(-2 -3)"
-                                fill="#888"
-                                />
-                            </svg>
-                            </span>
-                            <span class="text">WEB問診</span>
-                        </a>
-                        </div>
-                    </div>
-                        <p class="footer-wrap__address">
-                            589-5702 長崎県平戸市生月町市壱部浦3-1
-                        </p>
-                        <table class="clinic-hours" aria-label="診療時間">
-  <thead>
-    <tr>
-      <th scope="col" class="col-time">診療時間</th>
-      <th scope="col">月</th>
-      <th scope="col">火</th>
-      <th scope="col">水</th>
-      <th scope="col">木</th>
-      <th scope="col">金</th>
-      <th scope="col">土</th>
-      <th scope="col">日</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row">9:00〜13:00</th>
-      <td><span class="dot" aria-label="診療"></span></td>
-      <td><span class="dot" aria-label="診療"></span></td>
-      <td><span class="dot" aria-label="診療"></span></td>
-      <td><span class="dot" aria-label="診療"></span></td>
-      <td><span class="dot" aria-label="診療"></span></td>
-      <td><span class="dot" aria-label="診療"></span></td>
-      <td class="off">-</td>
-    </tr>
-
-    <tr>
-      <th scope="row">14:00〜18:00</th>
-      <td><span class="dot" aria-label="診療"></span></td>
-      <td><span class="dot" aria-label="診療"></span></td>
-      <td><span class="dot" aria-label="診療"></span></td>
-      <td><span class="dot" aria-label="診療"></span></td>
-      <td><span class="dot" aria-label="診療"></span></td>
-      <td><span class="dot" aria-label="診療"></span></td>
-      <td class="off">-</td>
-    </tr>
-  </tbody>
-</table>
-
-                    </div>
-                    <div class="footer-wrap__main__right">
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d885.1493549030656!2d129.43269615888016!3d33.390819380915104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356afb2558b974f5%3A0xe1dcbc401f444bdd!2sNATURAL%20TEETH!5e0!3m2!1sja!2sjp!4v1768818543503!5m2!1sja!2sjp" width="640" height="640" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-wrap__img">
-              <img src="img/p_gaikan1_3.jpg" alt="フッター画像" class="footer-wrap__img-img" />
-              <img src="img/p_gaikan4_3.jpg" alt="フッター画像2" class="footer-wrap__img-img" />
-            </div>
-            <div class="footer-wrap__copy">
-              <p>Copyright NATURAL TEETH - All Rights Reserved 2015 </p>
-            </div>
+          <div class="nt_im-wrap__we__body">
+            <ul class="we-list">
+              <li class="we-list__item">治療後に腫れるのが嫌だ</li>
+              <li class="we-list__item">長時間の手術は怖く嫌だ</li>
+              <li class="we-list__item">家族にもバレずに治療したい</li>
+              <li class="we-list__item">歳なので固い食べ物を諦めていた</li>
+              <li class="we-list__item">仕事が忙しいので時間がない</li>
+              <li class="we-list__item">
+                友人とカラオケを大きく口を開けて歌いたい
+              </li>
+            </ul>
+          </div>
         </div>
+        <div class="nt_im-wrap__body">
+          <div class="nt_im-wrap__we__head sub__head">
+            <h3 class="sub__head__txt">
+              もう歳だからと諦める必要はありません！
+            </h3>
+            <p class="sinbi__subtxt">
+              ～身体への負担の少ない、低侵襲のインプラント治療を採用しています～
+            </p>
+          </div>
+          <div class="nt_im-wrap__system__body">
+            <div class="nt-member__system__body__txt">
+              <p>
+                院長の高崎は、九州大学大学院在学中の2000年からインプラント治療に取り組んでいます。<br />
+                開業当初は、現在でも多くの歯科医院で行われているメスを使い切開する方法でした。術後、患者さんが腫れていたり痛みがでるのを見ていて、これが本当に良い方法なのか？と、疑問を持つようになりました。<br />
+                2008年サンフランシスコのＤｒ.ラムの研修会に参加し、それまでの考えが一変しました。プロ野球の王さんが、内視鏡手術をして回復が早かった事はご存知の通りです。<br />
+                やはり<span class="smallblue"
+                  >インプラント治療でも、内視鏡の様に低侵襲で治療をすれば歯ぐきからの血流が保たれて治りが早い</span
+                >と考え、現在実践しています。<br />
+                <span class="smallblue"
+                  >「あっと言う間に終わった」「想像していたほど、痛くなかった！」</span
+                >等、嬉しい言葉をたくさん頂いております。<br />
+                入れ歯は嫌で自分の歯の様に噛みたいけど、腫れや痛みが怖いという方、ぜひ一度、ご相談ください。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="implant-flow__inner">
+          <div class="nt_im-wrap__we__head sub__head">
+            <h3 class="sub__head__txt">NTインプラントの流れ</h3>
+            <p class="sinbi__subtxt">
+              ～治療前の検査から、治療後の予防まで安全・安心の診療システムです～
+            </p>
+          </div>
+          <div class="implant-flow__list">
+            <div class="implant-flow__item">
+              <div class="implant-flow__text">
+                <span class="step">STEP 01</span>
+                <h3>精密な検査</h3>
+                <p class="catch">〜どこよりも安全な治療を実現〜</p>
+                <p>
+                  【CTによる解析】<br />
+                  立体的な画像で骨の厚み・神経の位置まで把握し、
+                  安全性を最優先に診断します。
+                </p>
+              </div>
+
+              <figure class="implant-flow__img">
+                <img src="img/インプラントの流れ.jpg" alt="" />
+              </figure>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="implant-flow__item">
+              <div class="implant-flow__text">
+                <span class="step">STEP 02</span>
+                <h3>治療前準備</h3>
+                <p class="catch">〜最短・最適な治療計画〜</p>
+                <p>
+                  ＮＴインプラントは最短で１本『30分』で埋入が終わります。ＣＴ画像ソフトを使用して、画面上で治療の進行・術式を再現。これにより実際の治療はとても安全、かつ最短で行うことが可能になりました。
+                </p>
+              </div>
+
+              <figure class="implant-flow__img">
+                <img src="img/インプラントの流れ2.jpg" alt="" />
+              </figure>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="implant-flow__item">
+              <div class="implant-flow__text">
+                <span class="step">STEP 03</span>
+                <h3>ケアの実施</h3>
+                <p class="catch">〜安心の無料メンテナンス3回つき〜</p>
+                <p>
+                  従来の術後ケアに加えて、術前にもお口の検査・ケアを実施します。また免疫力を高める錠剤や、唾液分泌や血流を促すマウスリンパマッサージをうける事で、より早い術後の回復が望めます。
+                  術後の経過確認、プロの歯科衛生士による３回の無料メインテナンスに加え、インプラントの長持ちに一番大切なご自宅でのケアも、しっかりとご指導いたします。
+                  もちろん、全てＮＴインプラント治療の中に含まれるので、安心です。
+                </p>
+              </div>
+
+              <figure class="implant-flow__img">
+                <img src="img/インプラントの流れ3.jpg" alt="" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      <div class="nt_im-wrap__body">
+        <div class="nt_im-wrap__diff__head sub__head">
+          <h3 class="sub__head__txt">一般的なオペと低侵襲オペの違いとは？</h3>
+        </div>
+        <div class="nt_im-wrap__diff__body">
+          <div class="nt-wrap__diff__body__left">
+            <img src="img/オペ.jpg" alt="" />
+          </div>
+          <div class="nt-wrap__diff__body__right">
+            <p>
+              インプラントは、この３つのブロックからできています。<br />
+              インプラントをアゴの骨に固定する為、手術が必要となります。<br />
+              ※上の人工歯の質はいくつか選択できます。
+            </p>
+          </div>
+        </div>
+        <div class="nt_im-wrap__diff__method">
+          <div class="nt_im-wrap__diff__method__top">
+            <p>
+              一般的な治療法ではインプラントを骨に固定する為、<span
+                class="smallblue"
+                >広範囲に切り開く</span
+              >必要がありました。
+            </p>
+            <div class="nt_im-wrap__diff__method__top__img">
+              <img src="img/p_chigai1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="nt_im-wrap__diff__method__top">
+            <p>
+              低侵襲の手術法では<span class="smallblue"
+                >最低限必要な箇所のみ</span
+              >治療しますから、回復が早いのです
+            </p>
+            <div class="nt_im-wrap__diff__method__top__img">
+              <img src="img/p_chigai2.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nt_im-wrap__body">
+        <div class="nt_im-wrap__diff__head sub__head">
+          <h3 class="sub__head__txt">
+            気軽にインプラントを決めてはダメです！！
+          </h3>
+          <p class="sinbi__subtxt">～インプラント周囲炎をご存知ですか？～</p>
+        </div>
+        <div class="nt_im-point__body">
+          <div class="nt_im-point__body__top">
+            <div class="nt-im-point__body__top__left">
+              <img src="img/p_implant_shuien.jpg" alt="" />
+            </div>
+            <div class="nt-im-point__body__top__right">
+              <h5>インプラント周囲炎の3つの特徴</h5>
+              <ul class="nt-im-point__body__top__right__list">
+                <li class="nt-im-point__body__top__right__list__item">
+                  見た目の炎症が弱く、動揺・痛みもないため、自覚症状が少なく気付くのが遅れがち
+                </li>
+                <li class="nt-im-point__body__top__right__list__item">
+                  歯周病と比べると、10～20倍の速さで進行するため、重症化する傾向がある
+                </li>
+                <li class="nt-im-point__body__top__right__list__item">
+                  再生能力が弱いため、回復が遅れる事がある
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="nt_im-point__body__bottom">
+            <h5 class="nt_im-point__body__bottom__ttl">
+              インプラント周囲炎にならないためには？
+            </h5>
+            <div class="nt_im-point__body__bottom__content">
+              <p>
+                インプラント治療は、治療後のメインテナンスが欠かせません。
+                このメインテナンスをしっかりと行わないと、インプラント周囲炎のような症状をはじめとした不具合が出てきます。
+                当院ではインプラント治療後の最高のメインテナンス体制として「NT会員」という
+                会員制予防プログラムを整えておりますので安心して、インプラント治療をお受け下さい。
+              </p>
+            </div>
+            <div class="nt_im-point__body__bottom__btn">
+              <a href="nt_member.html"> NT会員について見る </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer" id="footer">
+      <div class="footer-wrap">
+        <div class="footer-wrap__main __inner">
+          <div class="footer-wrap__main__body">
+            <div class="footer-wrap__main__left">
+              <div class="footer-logo">
+                <a href="#" class="footer-logo__link">
+                  <img
+                    src="img/logo.svg"
+                    alt="ナチュラルティース ロゴ"
+                    class="footer-logo__img"
+                  />
+                </a>
+              </div>
+              <div class="footer-wrap__center">
+                <div class="footer-wrap__hour">
+                  <p class="footer-wrap__hour-text">診療時間</p>
+                  <p class="footer-wrap__hour-a.m">9:00 - 12:00</p>
+                  <p class="footer-wrap__hour-p.m">15:30 - 18:30</p>
+                </div>
+                <div class="footer-wrap__contact">
+                  <a href="#" class="footer-wrap__contact-ins">
+                    <span class="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                      >
+                        <path
+                          id="パス_1868"
+                          data-name="パス 1868"
+                          d="M6.62,10.79a15.149,15.149,0,0,0,6.59,6.59l2.2-2.2a.994.994,0,0,1,1.02-.24,11.407,11.407,0,0,0,3.57.57,1,1,0,0,1,1,1V20a1,1,0,0,1-1,1A17,17,0,0,1,3,4,1,1,0,0,1,4,3H7.5a1,1,0,0,1,1,1,11.36,11.36,0,0,0,.57,3.57,1,1,0,0,1-.25,1.02Z"
+                          transform="translate(-3 -3)"
+                          fill="#888"
+                        />
+                      </svg>
+                    </span>
+                    <span class="text">052-773-1811</span>
+                  </a>
+                  <a href="#" class="footer-wrap__contact-ins">
+                    <span class="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="21.522"
+                        height="23.059"
+                        viewBox="0 0 21.522 23.059"
+                      >
+                        <path
+                          id="calendar-days"
+                          d="M5.765,0A1.15,1.15,0,0,1,6.918,1.153V3.075H14.6V1.153a1.153,1.153,0,0,1,2.306,0V3.075h1.537a3.077,3.077,0,0,1,3.075,3.075V19.985a3.077,3.077,0,0,1-3.075,3.075H3.075A3.077,3.077,0,0,1,0,19.985V6.149A3.077,3.077,0,0,1,3.075,3.075H4.612V1.153A1.15,1.15,0,0,1,5.765,0ZM18.447,20.753a.771.771,0,0,0,.769-.769V16.91H14.989v3.843Zm.769-6.149V10.761H14.989V14.6Zm-6.533,0V10.761H8.839V14.6Zm-6.149,0V10.761H2.306V14.6ZM2.306,16.91v3.075a.771.771,0,0,0,.769.769H6.533V16.91Zm6.533,0v3.843h3.843V16.91ZM5.765,5.38H3.075a.771.771,0,0,0-.769.769V8.455h16.91V6.149a.771.771,0,0,0-.769-.769Z"
+                          fill="#888"
+                        />
+                      </svg>
+                    </span>
+                    <span class="text">WEB予約</span>
+                  </a>
+                  <a href="#" class="footer-wrap__contact-ins">
+                    <span class="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="18"
+                        viewBox="0 0 20 18"
+                      >
+                        <path
+                          d="M20,3H4A2.006,2.006,0,0,0,2,5V16a2.006,2.006,0,0,0,2,2H7L6,19v2H18V19l-1-1h3a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,20,3Zm0,13H4V5H20Z"
+                          transform="translate(-2 -3)"
+                          fill="#888"
+                        />
+                      </svg>
+                    </span>
+                    <span class="text">WEB問診</span>
+                  </a>
+                </div>
+              </div>
+              <p class="footer-wrap__address">
+                589-5702 長崎県平戸市生月町市壱部浦3-1
+              </p>
+              <table class="clinic-hours" aria-label="診療時間">
+                <thead>
+                  <tr>
+                    <th scope="col" class="col-time">診療時間</th>
+                    <th scope="col">月</th>
+                    <th scope="col">火</th>
+                    <th scope="col">水</th>
+                    <th scope="col">木</th>
+                    <th scope="col">金</th>
+                    <th scope="col">土</th>
+                    <th scope="col">日</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <th scope="row">9:00〜13:00</th>
+                    <td><span class="dot" aria-label="診療"></span></td>
+                    <td><span class="dot" aria-label="診療"></span></td>
+                    <td><span class="dot" aria-label="診療"></span></td>
+                    <td><span class="dot" aria-label="診療"></span></td>
+                    <td><span class="dot" aria-label="診療"></span></td>
+                    <td><span class="dot" aria-label="診療"></span></td>
+                    <td class="off">-</td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">14:00〜18:00</th>
+                    <td><span class="dot" aria-label="診療"></span></td>
+                    <td><span class="dot" aria-label="診療"></span></td>
+                    <td><span class="dot" aria-label="診療"></span></td>
+                    <td><span class="dot" aria-label="診療"></span></td>
+                    <td><span class="dot" aria-label="診療"></span></td>
+                    <td><span class="dot" aria-label="診療"></span></td>
+                    <td class="off">-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="footer-wrap__main__right">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d885.1493549030656!2d129.43269615888016!3d33.390819380915104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356afb2558b974f5%3A0xe1dcbc401f444bdd!2sNATURAL%20TEETH!5e0!3m2!1sja!2sjp!4v1768818543503!5m2!1sja!2sjp"
+                width="640"
+                height="640"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="footer-wrap__img">
+          <img
+            src="img/p_gaikan1_3.jpg"
+            alt="フッター画像"
+            class="footer-wrap__img-img"
+          />
+          <img
+            src="img/p_gaikan4_3.jpg"
+            alt="フッター画像2"
+            class="footer-wrap__img-img"
+          />
+        </div>
+        <div class="footer-wrap__copy">
+          <p>Copyright NATURAL TEETH - All Rights Reserved 2015</p>
+        </div>
+      </div>
     </footer>
     <script src="js/slidein.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/top_slider.js" defer></script>
+  </body>
 </html>

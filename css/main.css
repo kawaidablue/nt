@@ -24,6 +24,51 @@
 .slidein.bottom {
   transform: translateY(60px);
 }
+.js-type {
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+}
+
+.js-type::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  background: currentColor;
+  margin-left: 6px;
+  transform: translateY(2px);
+  -webkit-animation: blink 0.8s step-end infinite;
+  animation: blink 0.8s step-end infinite;
+  opacity: 0;
+}
+
+.js-type.is-typing::after {
+  opacity: 1;
+}
+.header-wrap__hero-titletop,
+.header-wrap__hero-titleleft,
+.header-wrap__hero-titleright {
+  min-height: 1em; /* 1行分を確保 */
+}
+
+/* TO / THE は2行分 */
+.header-wrap__hero-titleleft {
+  min-height: 2.4em;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 /* footer用 */
 footer {
   border-top: 1px solid #ccc;
@@ -231,6 +276,9 @@ footer {
     width: 100%;
     height: 100%;
     border: 0;
+  }
+  .footer-wrap__copy {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 540px) {

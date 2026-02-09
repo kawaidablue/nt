@@ -204,3 +204,138 @@ body {
   text-align: center;
   font-weight: 100;
 }
+/* ===== ハンバーガー（SPのみ） ===== */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 300;
+  width: 60px;
+  height: 45px;
+  border: 1px solid rgba(131, 131, 131, 0.9);
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  display: none;
+  place-items: center;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  width: 37px;
+  height: 2px;
+  background: #000000;
+  border-radius: 999px;
+  transition:
+    transform 0.25s,
+    opacity 0.25s;
+}
+@media (max-width: 900px) {
+  .header-wrap__logo {
+    width: 30%;
+  }
+  .header-wrap__nav {
+    display: none;
+  }
+  .hamburger {
+    display: grid;
+  }
+}
+
+/* 開いた時の× */
+body.is-navopen .hamburger span:nth-child(1) {
+  transform: translateY(14px) rotate(47deg);
+}
+body.is-navopen .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+body.is-navopen .hamburger span:nth-child(3) {
+  transform: translateY(-13px) rotate(-47deg);
+}
+body.is-navopen .hamburger span {
+  background: #ffffff; /* 黄色など */
+}
+/* ===== SPナビ overlay（すでにあるならそのままでOK） ===== */
+.spnav {
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+.spnav__inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(86vw, 360px);
+  height: 100%;
+  background: #0b5aa6;
+  color: #fff;
+  padding: 50px 18px;
+  transform: translateX(100%);
+  transition: transform 0.25s;
+  overflow: auto;
+}
+body.is-navopen .spnav {
+  opacity: 1;
+  pointer-events: auto;
+}
+body.is-navopen .spnav__inner {
+  transform: translateX(0);
+}
+
+/* ===== SP：下層アコーディオン ===== */
+.spnav__menu a {
+  display: block;
+  padding: 14px 6px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 16px;
+}
+.spnav__group {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.spnav__toggle {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  padding: 14px 6px;
+  text-align: left;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.spnav__icon {
+  font-size: 22px;
+  line-height: 1;
+  transition: transform 0.25s;
+}
+.spnav__sub {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding-left: 10px;
+}
+.spnav__sub a {
+  display: block;
+  padding: 12px 6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.spnav__group.is-open .spnav__sub {
+  max-height: 500px;
+}
+.spnav__group.is-open .spnav__icon {
+  transform: rotate(45deg);
+}

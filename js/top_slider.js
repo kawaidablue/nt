@@ -61,3 +61,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape") close();
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".spnav__toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const group = btn.closest(".spnav__group");
+      const sub = group.querySelector(".spnav__sub");
+      const isOpen = group.classList.toggle("is-open");
+
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      sub.setAttribute("aria-hidden", isOpen ? "false" : "true");
+    });
+  });
+});

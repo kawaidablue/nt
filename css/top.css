@@ -80,22 +80,12 @@ html {
   position: relative;
   grid-area: 1 / 2 / 5 / 6;
 }
-.header-wrap__hero::before {
+.header-wrap__hero-inner::after {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(18, 18, 18, 0.2); /* ←薄い白背景 */
   z-index: 1;
-}
-.header-wrap__hero-inner img::after {
-  background-color: #333333;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  width: 100%;
 }
 .header-wrap__hero-inner {
   width: 100%;
@@ -113,9 +103,10 @@ html {
 .header-wrap__hero-titlebox {
   position: absolute;
   bottom: 0;
-  left: 2%;
+  right: 2%;
   text-align: center;
   color: #fff;
+  z-index: 999;
   line-height: 1;
 }
 .header-wrap__hero-titlebox {
@@ -125,15 +116,15 @@ html {
   font-weight: 100;
 }
 .header-wrap__hero-titletop {
-  font-size: 148px;
+  font-size: 180px;
 }
 .header-wrap__hero-titleleft {
-  font-size: 44px;
+  font-size: 60px;
   position: absolute;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 .header-wrap__hero-titleright {
-  font-size: 148px;
+  font-size: 180px;
   text-align: right;
 }
 .header-wrap__hero-nav {
@@ -144,10 +135,12 @@ html {
   margin: 0 auto;
   max-width: 1000px;
 }
+
 .header-wrap__hero-nav a {
   color: #888888;
   text-decoration: none;
 }
+
 /* ===== PCドロップダウン ===== */
 .header-wrap__hero-nav-item {
   position: relative;
@@ -209,6 +202,55 @@ html {
 .header-subnav a:hover {
   background: #f4f8fc;
   color: #0b5aa6;
+}
+/* SPの下層メニュー */
+.spnav__group {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.spnav__toggle {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  padding: 14px 6px;
+  text-align: left;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.spnav__icon {
+  font-size: 22px;
+  line-height: 1;
+  transition: transform 0.25s;
+}
+
+.spnav__sub {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding-left: 10px;
+}
+
+.spnav__sub a {
+  display: block;
+  padding: 12px 6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  opacity: 0.95;
+}
+
+/* open時 */
+.spnav__group.is-open .spnav__sub {
+  max-height: 500px;
+} /* 足りなければ増やす */
+.spnav__group.is-open .spnav__icon {
+  transform: rotate(45deg);
 }
 
 /* SPでは無効化 */
@@ -309,6 +351,7 @@ html {
   position: absolute;
   bottom: -10%;
   width: 80%;
+  left: -5%;
 }
 .news-img img {
   width: 100%;

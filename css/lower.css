@@ -190,12 +190,13 @@ p {
 }
 .image-modal img {
   width: 65vw;
-  height: 65vh;
+  height: auto;
   border-radius: 16px;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
   transform: scale(0.95);
   transition: transform 0.3s ease;
-  aspect-ratio: 4 / 3;
+      -o-object-fit: cover;
+         object-fit: cover;
 }
 .image-modal.is-open img {
   transform: scale(1);
@@ -1897,7 +1898,8 @@ a {
   display: flex;
   flex-direction: column;
   gap: 60px;
-  margin: 60px 0;
+  width: 90%;
+  margin: 60px auto;
 }
 
 /* item */
@@ -1966,6 +1968,10 @@ a {
   .implant-flow__item {
     flex-direction: column;
   }
+  .implant-flow__img {
+    width: 45%;
+    margin-bottom: 10px;
+  }
 
   .implant-flow__item:nth-child(even) {
     flex-direction: column;
@@ -2019,6 +2025,9 @@ a {
 }
 .nt_im-wrap__diff__method__top {
   text-align: center;
+}
+.nt_im-wrap__diff__method__top img {
+  width: 100%;
 }
 .nt_im-point__body__top {
   display: flex;
@@ -2116,40 +2125,109 @@ a {
   .concept-wrap__order__list__item__head {
     font-size: 28px;
   }
-}
-@media screen and (max-width: 680px) {
-  .sub__body {
-    width: 95%;
-  }
-  .concept-wrap__order__list__item__head {
-    font-size: 20px;
-  }
-  .concept-wrap__body__list__item {
+  .nt_im-wrap__diff__body {
     flex-direction: column;
   }
-  .concept-wrap__body__list__item__left {
+  .nt-wrap__diff__body__left {
+    width: 45%;
+  }
+  .nt_im-wrap__diff__body {
+    padding: 40px 0 80px 0;
+  }
+  .nt-wrap__diff__body__right p {
+    line-height: 2;
+    font-size: 16px;
+  }
+  .nt_im-point__body__top {
+    flex-direction: column;
+  }
+  .nt-im-point__body__top__right {
     width: 100%;
   }
-  .concept-wrap__body__list__item__right {
-    width: 80%;
-    margin: 40px auto;
+  .nt-im-point__body__top__left {
+    width: 45%;
   }
-  .concept-wrap__order__list__item__txt {
-    font-size: 14px;
-  }
-  .tour-wrap__body {
+  .implant-flow__list {
     width: 95%;
     margin: 0 auto;
   }
+  .image-modal img {
+    width: 85vw;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    aspect-ratio: 4 / 3;
+  }
 }
-@media screen and (max-width: 400px) {
-  .concept-wrap__order__list__item__head {
-    font-size: 16px;
+  @media screen and (max-width: 680px) {
+    .sub__body {
+      width: 95%;
+    }
+    .concept-wrap__order__list__item__head {
+      font-size: 20px;
+    }
+    .concept-wrap__body__list__item {
+      flex-direction: column;
+    }
+    .concept-wrap__body__list__item__left {
+      width: 100%;
+    }
+    .concept-wrap__body__list__item__right {
+      width: 80%;
+      margin: 40px auto;
+    }
+    .concept-wrap__order__list__item__txt {
+      font-size: 14px;
+    }
+    .tour-wrap__body {
+      width: 95%;
+      margin: 0 auto;
+    }
+    .we-list {
+      font-size: 14px;
+    }
+    .tour-wrap__body__list__item:nth-child(3) {
+      grid-area: 3 / 1  / 5 / 4;
+    }
+    .tour-wrap__body__list__item:nth-child(4) {
+      grid-area: 3 / 4 / 5 / 7;
+    }
+    .tour-wrap__body__list__item:nth-child(5) {
+      grid-area: 5 / 1 / 5 / 4;
+    }
+    .tour-wrap__body__list__item:nth-child(6) {
+      grid-area: 5 / 4 / 5 / 7;
+    }
+        .tour-wrap__body__list__item:nth-child(7) {
+      grid-area: 7 / 1 / 7 / 4;
+    }
+    .tour-wrap__body__list__item:nth-child(8) {
+      grid-area: 7 / 4 / 7 / 7;
+    }
+    .tour-wrap__body__list__item:nth-child(9) {
+      grid-area: 9 / 1 / 9 / 4;
+    }
+    .tour-wrap__body__list__item:nth-child(10) {
+      grid-area: 9 / 4 / 9 / 7;
+    }
+        .tour-wrap__body__list__item:nth-child(11) {
+      grid-area: 11 / 1 / 11 / 4;
+    }
+    .tour-wrap__body__list__item p {
+      font-size:  14px;
+}
   }
-  .concept-wrap__order__list__item__txt {
-    font-size: 12px;
-  }
-  .concept-wrap__order__list__item__under {
-    font-size: 12px;
+  @media screen and (max-width: 400px) {
+    .concept-wrap__order__list__item__head {
+      font-size: 16px;
+    }
+    .concept-wrap__order__list__item__txt {
+      font-size: 12px;
+    }
+    .concept-wrap__order__list__item__under {
+      font-size: 12px;
+    }
   }
 }
