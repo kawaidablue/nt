@@ -7,6 +7,9 @@ html {
   font-size: 100%;
   font-weight: 100;
 }
+.header-logosp {
+  display: none;
+}
 .header-wrap {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -103,6 +106,10 @@ html {
   width: 100%;
   height: auto;
 }
+.header-wrap__hero-inner video,
+.header-wrap__hero-inner img {
+  display: block;
+}
 .header-wrap__hero-titlebox {
   position: absolute;
   bottom: 0;
@@ -141,6 +148,75 @@ html {
   color: #888888;
   text-decoration: none;
 }
+/* ===== PCドロップダウン ===== */
+.header-wrap__hero-nav-item {
+  position: relative;
+}
+
+.header-wrap__hero-nav-item.has-sub > a::after {
+  content: "▼";
+  font-size: 10px;
+  margin-left: 6px;
+}
+
+/* サブメニュー本体 */
+.header-subnav {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  min-width: 220px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+  z-index: 200;
+}
+
+/* 三角 */
+.header-subnav::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+}
+
+/* 表示 */
+.header-wrap__hero-nav-item.has-sub:hover .header-subnav {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* リスト */
+.header-subnav li {
+  list-style: none;
+}
+
+.header-subnav a {
+  display: block;
+  padding: 14px 18px;
+  color: #888;
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.header-subnav a:hover {
+  background: #f4f8fc;
+  color: #0b5aa6;
+}
+
+/* SPでは無効化 */
+@media (max-width: 900px) {
+  .header-subnav {
+    display: none;
+  }
+}
 
 /* ニュースセクション */
 .__inner {
@@ -167,7 +243,7 @@ html {
 }
 .news-wrap__right {
   width: 100%;
-  aspect-ratio: 1 / 1; /* カレンダー向き */
+  aspect-ratio: 1 / 1;
   position: relative;
 }
 
@@ -404,6 +480,145 @@ html {
 .mes-wrap__spimg {
   display: none;
 }
+/* 既存PCナビはSPで隠す */
+@media (max-width: 900px) {
+  .header-wrap__hero-nav {
+    display: none;
+  }
+  .header-wrap__aside {
+    display: none;
+  } /* 左のasideもSPでは隠すなら */
+}
+.hamburger {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 300;
+  width: 60px;
+  height: 45px;
+  position: fixed;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(0, 0, 0, 0.15);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  display: none;
+  place-items: center;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 37px;
+  height: 2px;
+  background: #fff;
+  border-radius: 999px;
+  transition:
+    transform 0.25s,
+    opacity 0.25s;
+}
+
+.hamburger__label {
+  display: none; /* 必要なら表示 */
+}
+
+/* SPだけ出す */
+@media (max-width: 900px) {
+  .hamburger {
+    display: grid;
+  }
+}
+
+/* ===== spnav overlay ===== */
+.spnav {
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+
+.spnav__inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(86vw, 360px);
+  height: 100%;
+  background: #0b5aa6; /* ナチュラルティースの青 */
+  color: #fff;
+  padding: 50px 18px;
+
+  transform: translateX(100%);
+  transition: transform 0.25s;
+  overflow: auto;
+}
+
+/* ロゴ */
+.spnav__logo {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 18px;
+}
+
+/* メニュー */
+.spnav__menu a {
+  display: block;
+  padding: 14px 6px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 16px;
+}
+
+/* CTA */
+.spnav__cta {
+  margin-top: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.spnav__btn {
+  display: grid;
+  place-items: center;
+  height: 46px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  text-decoration: none;
+}
+
+.spnav__btn.is-primary {
+  background: #ffe100;
+  color: #0b5aa6;
+  border-color: transparent;
+  font-weight: 700;
+}
+
+/* ===== open state ===== */
+body.is-navopen .spnav {
+  opacity: 1;
+  pointer-events: auto;
+  overflow: hidden;
+}
+
+body.is-navopen .spnav__inner {
+  transform: translateX(0);
+}
+
+body.is-navopen .hamburger span:nth-child(1) {
+  transform: translateY(14px) rotate(47deg);
+}
+body.is-navopen .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+body.is-navopen .hamburger span:nth-child(3) {
+  transform: translateY(-13px) rotate(-47deg);
+}
+
 @media screen and (max-width: 1280px) {
   .news-wrap__list a {
     flex-direction: column;
@@ -459,6 +674,18 @@ html {
   }
   .ttl {
     font-size: 48px;
+  }
+  .header-logosp {
+    position: absolute;
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    z-index: 100;
+    top: 20px;
+    left: 20px;
+  }
+  .header-logosp img {
+    width: 100%;
   }
 }
 @media screen and (max-width: 800px) {
@@ -546,16 +773,22 @@ html {
     font-size: 14px;
     line-height: 1.5;
   }
+  .image-wrap__left {
+    width: 95%;
+  }
+  .treatment-wrap__list__item {
+    width: 120px;
+  }
 }
 @media screen and (max-width: 540px) {
   .header-wrap__hero-titletop {
-    font-size: 64px;
+    font-size: 48px;
   }
   .header-wrap__hero-titleright {
-    font-size: 64px;
+    font-size: 48px;
   }
   .header-wrap__hero-titleleft {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
   }
   .banar {
@@ -564,9 +797,34 @@ html {
   p {
     font-size: 14px;
   }
+  .header-logosp {
+    position: absolute;
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    z-index: 100;
+    top: 10px;
+    left: 10px;
+  }
+  .image-wrap__ttl h3 {
+    font-size: 20px;
+  }
+  .mes-wrap__left p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 2;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 345px) {
   .about-wrap__list__item {
     width: 130px;
+  }
+  .header-logosp {
+    position: absolute;
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    z-index: 100;
   }
 }

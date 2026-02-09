@@ -71,6 +71,11 @@ footer {
 }
 .footer-wrap__contact-ins .icon {
   position: absolute;
+  width: 18px; /* ← ここで大きさ制御 */
+  height: 18px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
 }
 .footer-wrap__contact-ins .text {
   text-align: center;
@@ -187,6 +192,10 @@ footer {
 .footer-wrap__main__spmap {
   display: none;
 }
+.footer-wrap__contact-ins .icon svg {
+  width: 100%;
+  height: 100%;
+}
 @media screen and (max-width: 1280px) {
   .footer-wrap__main__body {
     width: 95%;
@@ -225,6 +234,9 @@ footer {
   }
 }
 @media screen and (max-width: 540px) {
+  footer {
+    padding-top: 0;
+  }
   .footer-wrap__main__left {
     width: 95%;
   }
@@ -245,6 +257,49 @@ footer {
     padding: 20px 10px;
     font-size: 14px;
   }
+  .footer-wrap__address {
+    font-size: 15px;
+  }
+  .clinic-hours .col-time {
+    width: 120px;
+  }
+  .clinic-hours {
+    font-size: 14px;
+  }
+  .footer-wrap__main__spmap {
+    display: block;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 360px) {
+  .footer-wrap__contact-ins .icon {
+    width: 15px;
+    height: 15px;
+  }
+  .footer-wrap__contact {
+    width: 45%;
+  }
+  .footer-wrap__contact a {
+    padding: 15px 0 15px 10px;
+  }
+  .footer-wrap__hour {
+    width: 120px;
+    height: 120px;
+  }
+  .footer-wrap__hour-text {
+    font-size: 12px;
+  }
+  .footer-wrap__hour-a.m {
+    font-size: 12px;
+  }
+  .footer-wrap__hour-p.m {
+    font-size: 12px;
+  }
+  .clinic-hours .col-time {
+    width: 100px;
+  }
+  .clinic-hours th,
+  .clinic-hours td {
+    padding: 10px 5px;
+  }
 }
