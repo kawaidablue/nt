@@ -103,6 +103,7 @@ body {
 .header-subnav {
   position: absolute;
   top: calc(100% + 12px);
+  top: 35px;
   left: 50%;
   transform: translateX(-50%);
 
