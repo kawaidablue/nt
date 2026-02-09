@@ -1,18 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const targets = document.querySelectorAll(".slidein");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-show");
-      }
-    });
-  }, {
-    threshold: 0.7
-  });
-
-  targets.forEach(el => observer.observe(el));
-});
 // ===== hero typewriter (slidein表示後に開始) =====
 function typeText(el, text, speed = 90) {
   el.textContent = "";
@@ -60,27 +45,53 @@ function startHeroTyping() {
     }, t2 + gap);
   }, t1 + gap);
 }
-
-// slideinで表示された瞬間に開始（IntersectionObserver）
 document.addEventListener("DOMContentLoaded", () => {
-  const target = document.querySelector(".header-wrap__hero-titlebox.m_copy");
-  if (!target) return;
+  const targets = document.querySelectorAll(".slidein");
+  if (!targets.length) return;
 
-  // SPだけ10%で発火、PCは今まで通り
-  const isSP = window.matchMedia("(max-width: 900px)").matches;
-  const th = isSP ? 0.1 : 0.6; // ← SP:10% / PC:60%
+  // ここで「画面幅」で判定（好きな境界に変えてOK）
+  const getOptionsByWidth = () => {
+    const w = window.innerWidth;
 
-  const io = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          startHeroTyping();
-          io.disconnect(); // 1回だけ
-        }
-      });
-    },
-    { threshold: th }
-  );
+    // 例：画面幅が700px以下なら早めに発火
+    if (w <= 700) {
+      return { threshold: 0.15, rootMargin: "0px 0px -10% 0px" };
+    }
+    // それ以外（PC想定）
+    return { threshold: 0.7, rootMargin: "0px" };
+  };
 
-  io.observe(target);
+  let observer;
+
+  const setupObserver = () => {
+    // 既存observerがあれば破棄
+    if (observer) observer.disconnect();
+
+    const opt = getOptionsByWidth();
+
+    observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-show");
+            observer.unobserve(entry.target); // 1回でOK
+          }
+        });
+      },
+      opt
+    );
+
+    targets.forEach((el) => {
+      // すでに表示済みは監視しない
+      if (!el.classList.contains("is-show")) observer.observe(el);
+    });
+  };
+
+  setupObserver();
+
+  // 回転・リサイズで画面幅が変わった時に再設定（必要なら）
+  window.addEventListener("resize", () => {
+    setupObserver();
+  });
 });
+

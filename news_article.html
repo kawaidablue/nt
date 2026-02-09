@@ -52,7 +52,6 @@
     />
   </head>
   <body>
-
         <header id="header" class="header">
       <div class="header-wrap">
         <!-- ロゴ -->
@@ -108,6 +107,61 @@
             </a>
           </div>
         </nav>
+        <!-- ハンバーガーボタン（SPのみ表示） -->
+        <button
+          class="hamburger"
+          type="button"
+          aria-controls="spnav"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <!-- SPナビ（PCナビと同じ項目） -->
+        <div class="spnav" id="spnav" aria-hidden="true">
+          <div class="spnav__inner">
+            <nav class="spnav__menu">
+              <a href="index.html">TOP</a>
+              <a href="concept.html">クリニック紹介</a>
+
+              <!-- 診療案内（下層） -->
+              <div class="spnav__group">
+                <button
+                  class="spnav__toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  診療案内 <span class="spnav__icon">+</span>
+                </button>
+                <div class="spnav__sub" aria-hidden="true">
+                  <a href="nt_implant.html">インプラント</a>
+                  <a href="nt_member.html">NT会員(自費予防)</a>
+                  <a href="children.html">子供達の噛み合わせ治療</a>
+                  <a href="yokayoka.html">良か良かデンチャー</a>
+                  <a href="sinbi.html">審美治療</a>
+                </div>
+              </div>
+
+              <!-- 設備紹介（下層） -->
+              <div class="spnav__group">
+                <button
+                  class="spnav__toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  設備紹介 <span class="spnav__icon">+</span>
+                </button>
+                <div class="spnav__sub" aria-hidden="true">
+                  <a href="tour.html">医院ツアー</a>
+                  <a href="sterillzation.html">滅菌処理</a>
+                  <a href="staff.html">スタッフ紹介</a>
+                </div>
+              </div>
+              <a href="https://recruit.nteeth.com/">採用について</a>
+              <a href="access.html">アクセス・診療時間</a>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
     <section class="top" id="top">
