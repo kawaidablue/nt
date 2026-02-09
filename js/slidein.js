@@ -66,6 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const target = document.querySelector(".header-wrap__hero-titlebox.m_copy");
   if (!target) return;
 
+  // SPだけ10%で発火、PCは今まで通り
+  const isSP = window.matchMedia("(max-width: 900px)").matches;
+  const th = isSP ? 0.1 : 0.6; // ← SP:10% / PC:60%
+
   const io = new IntersectionObserver(
     (entries) => {
       entries.forEach((e) => {
@@ -75,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.6 }
+    { threshold: th }
   );
 
   io.observe(target);
