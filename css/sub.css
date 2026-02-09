@@ -152,16 +152,11 @@ body {
   text-decoration: none;
   font-size: 18px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  color: #888888;
 }
 
 .header-subnav li:last-child a {
   border-bottom: none;
-}
-
-/* hover */
-.header-subnav a:hover {
-  background: rgba(11, 90, 166, 0.06);
-  color: #0b5aa6;
 }
 
 /* =========================
