@@ -48,8 +48,8 @@ function startHeroTyping() {
   const toEl = left.querySelector(".js-type-to");
   const theEl = left.querySelector(".js-type-the");
 
-  // Ikutsuki → to → The → World
-  const t1 = typeText(top, "Ikutsuki", speed);
+  // Ikitsuki → to → The → World
+  const t1 = typeText(top, "Ikitsuki", speed);
   setTimeout(() => {
     const t2 = typeText(toEl, "to", speed);
     setTimeout(() => {
