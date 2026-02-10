@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const getOptionsByWidth = () => {
     const w = window.innerWidth;
     if (w <= 700) return { threshold: 0.15, rootMargin: "0px 0px -10% 0px" };
-    return { threshold: 0.7, rootMargin: "0px" };
+    return { threshold: 0.4, rootMargin: "0px" };
   };
 
   let observer;

@@ -231,6 +231,14 @@ body {
     transform 0.25s,
     opacity 0.25s;
 }
+@media (max-width: 1280px) {
+  .header-wrap__nav {
+    gap: 0;
+  }
+  .header-wrap__nav-item {
+    margin-left: 1rem;
+  }
+}
 @media (max-width: 900px) {
   .header-wrap__logo {
     width: 30%;
