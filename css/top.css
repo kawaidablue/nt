@@ -397,6 +397,9 @@ html {
   width: 100%;
 }
 .slider img {
+  aspect-ratio: 16 / 9;
+  -o-object-fit: cover;
+  object-fit: cover;
   width: 100%;
 }
 /* 診療内容セクション */
