@@ -352,7 +352,7 @@ html {
   color: #fff;
 }
 .news-wrap__right {
-  width: 55%;
+  width: 45%;
 }
 .news-img {
   position: absolute;
@@ -486,6 +486,9 @@ html {
 }
 .image {
   background-image: url(../img/bg_blue.svg);
+    background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .image-wrap {
   display: flex;

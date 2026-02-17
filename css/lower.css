@@ -1,4 +1,7 @@
 @charset "UTF-8";
+header-wrap__contact-ins {
+    text-align: center;
+}
 /* コンセプトページ */
 li {
   list-style: none;
