@@ -49,20 +49,28 @@ html {
 .header-wrap__contact {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
-  text-align: center;
   position: relative;
   width: 100%;
-  background-color: #f3f2f2;
   padding: 20px 0;
+}
+.header-wrap__contact-ins {
+  text-align: center;
+}
+.header-wrap__contact a {
+    border: 1px solid #ccc;
+}
+.header-wrap__contact-ad {
+  white-space: nowrap;
+  font-size:13px;
+  line-height: 1.4;
 }
 .header-wrap__contact-ins .icon {
   position: absolute;
 }
 .header-wrap__contact-ins .text {
-  text-align: center;
   width: 100%;
 }
 .header-wrap__contact a {
@@ -72,7 +80,6 @@ html {
   padding: 5.5%;
   background-color: #fff;
   width: 180px;
-  text-align: center;
   text-decoration: none;
   color: #888888;
 }
@@ -369,8 +376,8 @@ html {
 .about-wrap__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  justify-content: space-between;
+  gap: 65px;
+  justify-content: flex-start;
   width: 95%;
   margin: 0 auto;
 }
@@ -873,4 +880,5 @@ body.is-navopen .hamburger span:nth-child(3) {
     margin: 0 auto;
     z-index: 100;
   }
+}
 }
