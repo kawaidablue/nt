@@ -195,6 +195,15 @@ footer {
   border-top: none;
   border-bottom: 1px solid #d9d9d9;
 }
+/* ▲ 土曜（三角） */
+.clinic-hours .triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 7px solid #8a8a8a;
+}
 
 /* 1列目（診療時間） */
 .clinic-hours .col-time {
